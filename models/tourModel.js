@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const slugify = require('slugify');
-// const User = require('./userModel');
-// const validator = require('validator');
 
 const tourSchema = new mongoose.Schema(
   {
@@ -138,12 +136,12 @@ tourSchema.pre('save', function (next) {
 // });
 
 // tourSchema.pre('save', function (next) {
-//   console.log('Will save document...');
+//   // console.log('Will save document...');
 //   next();
 // });
 
 // tourSchema.post('save', function (doc, next) {
-//   console.log(doc);
+//   // console.log(doc);
 //   next();
 // });
 
@@ -164,11 +162,11 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-tourSchema.post(/^find/, function (docs, next) {
-  // eslint-disable-next-line no-console
-  console.log(`Query took ${Date.now() - this.start} milliseconds`);
-  next();
-});
+// tourSchema.post(/^find/, function (docs, next) {
+//   // eslint-disable-next-line no-console
+//   console.log(`Query took ${Date.now() - this.start} milliseconds`);
+//   next();
+// });
 
 // AGGREGATION MIDDLEWARE
 // tourSchema.pre('aggregate', function (next) {
